@@ -37,8 +37,8 @@ h2 {
 
 .splashcontainer {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 img {
