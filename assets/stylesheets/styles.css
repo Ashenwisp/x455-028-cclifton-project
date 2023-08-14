@@ -1,0 +1,264 @@
+/* Start https://www.cursors-4u.com */ 
+* {cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat945.ani), 
+  url(https://cur.cursors-4u.net/nature/nat-10/nat945.png), auto !important;} 
+  /* End https://www.cursors-4u.com */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  
+  nav ul {
+    /* OR nav > ul --- ">" immediate after parent tag */
+    list-style: none;
+    margin: 0;
+  }
+  
+  /* Ref: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after_style */
+  /* inserts something after the content */
+  /* if removed, the content of next tag will be right next to the nav bar */
+  nav ul::after {
+    /* OR nav > ul::after --- ">" immediate after parent tag */
+    content: "";
+    display: block;
+    clear: both;
+    /* The element is pushed below both left and right floated elements. Ref: https://www.w3schools.com/cssref/pr_class_clear.asp */
+  }
+  
+  nav ul li a {
+    /* OR nav > ul > li > a --- ">" immediate after parent tag */
+    /* allows to set a width and height on the element, ref: https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1 */
+    background-color: #000000;
+    display: inline-block;
+    color: #80C525;
+    @font-face 
+    {font-family: "Font Family 1";
+    src: url(./assets/fonts/Raleway-Black.ttf) format("truetype");}
+    /* padding: top right bottom left */
+    padding: 10px 20px 10px 10px;
+    text-decoration: none;
+    width: auto;
+  }
+  
+  /* top level */
+  nav>ul>li {
+    float: left;
+    /* make nav item align hortizontally */
+  }
+  
+  #navLogo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+  }
+  
+  a.logo {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: url(../images/logo.png) no-repeat 0 0;
+    /* 0 0 are x,y coordination in relation to width and height setting */
+    background-size: contain;
+    float: left;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+  }
+  
+  #navDropdown {
+    display: none;
+  }
+  
+  .dropdown {
+    display: block;
+    left: 0;
+  }
+  
+  .dropbtn {
+    background-color: rgba(0, 102, 102, 0);
+    color: #0d3305;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    line-height: normal;
+  }
+  
+  .dropbtn:hover {
+    color: #ffffff;
+  }
+  
+  .dropdown-content {
+    display: none;
+    /* set display to none, so dropdown menu won't show till hover dropdown */
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /*z-index: 1;*/
+  }
+  
+  .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: normal;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #0a3f00;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover {
+    background-color: #80C525;
+  }
+  
+  .active-page {
+    background-color: #0a3f00;
+  }
+    
+  .active-menu-item {
+    background-color: #80C525;
+    color: #000000 !important;
+  }
+  
+  .to-top {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .padding-right {
+    padding-right: 15px;
+  }
+  
+  footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+  }
+  
+  .lux-couture {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    order: 2;
+  }
+  
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 1;
+    order: 3;
+  }
+
+  .privacy-statement {
+    color: #fff;
+    font-size: 14px;
+    text-align: right;
+  }
+
+  a {
+    color: #00a2ff;
+    text-decoration: none;
+  }
+  
+  @media screen and (max-width: 820px) {
+  
+    #navLeft,
+    #navRight {
+      display: none;
+      /* hide the nav bar in small screen size */
+    }
+  
+    #navDropdown {
+      display: block;
+      /* show dropdown menu and button in small screen size */
+    }
+  
+    header {
+      background-color: #F5F5F5;
+      /* padding: top right bottom left */
+    }
+  
+    .dropdown-content {
+      max-width: 820px;
+      /* set the dropdown-content width same as the @media screen width */
+    }
+  
+    a.logo {
+      width: 50px;
+      height: 50px;
+      padding-left: 10px;
+    }
+
+    .flex-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lux-couture {
+      order: 2;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+  
+    .privacy-statement {
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .info-container {
+      width: 100%;
+      order: 1;
+    }
+  
+    .social-icon {
+      padding: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  body {
+    background-color: #F2F1F1;
+  }
