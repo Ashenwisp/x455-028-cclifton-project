@@ -172,6 +172,28 @@ body {
   justify-content: space-between;
   background-color: #F2F1F1;
 }
+  @font-face {
+    font-family: "Font Family 1";
+    src: url(../fonts/Raleway-Black.ttf) format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Font Family 2";
+    src: url(../fonts/Merriweather-Black.ttf) format("truetype");
+  }
+  
+  h1 {
+    font-family: "Font Family 2", sans-serif;
+    font-size: 50px;
+    margin: 0;
+  }
+  
+  h2 {
+    font-family: "Font Family 2", sans-serif;
+    font-size: 30px;
+    margin: 0;
+  
+}
 
 /* Header and banner styles */
 .banner {
