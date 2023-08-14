@@ -7,60 +7,8 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
   <title>Lux Couture</title>
-</head>
-
-<body>
-  <header>
-    <div class="flex-container">
-      <!-- dropdown-menu -->
-      <nav id="navDropdown">
-        <div class="dropdown">
-          <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
-          <div class="dropdown-content">
-            font-family: "Font Family 1", sans-serif;
-            <a href="index.html"><b>{</b> Home <b>}</b></a>
-            <a href="page-2.html">Designers</a>
-            <a href="page-3.html">Trending</a>
-            <a href="#" class="active-menu-item"><b>{</b> Bestsellers <b>}</b></a>
-            <a href="page-5.html">On the Runway</a>
-            <a href="page-6.html">Year in Review</a>
-          </div>
-        </div>
-      </nav>
-      <!-- center logo -->
-      <nav id="navLogo"><a class="logo" href="#"></a></nav>
-      <!-- horizontal right -->
-      <nav id="navRight">
-      <ul style="padding-right: 20px;">
-      <li>
-      <a href="index.html"><b>|</b> Home <b>|</b></a>
-      </li>
-      <li>
-      <a href="page-2.html"><b>|</b> Designers <b>|</b></a>
-      </li>
-      <li>
-      <a href="page-3.html"><b>|</b> Trending <b>|</b></a>
-      </li>
-      <li>
-        <a href="#" class="active-page"><b>{</b> Best Sellers <b>}</b></a>
-      </li>
-      <li>
-      <a href="page-5.html"><b>|</b> On the Runway <b>|</b></a>
-      </li>
-      <li>
-      <a href="page-6.html"><b>|</b> Year in Review <b>|</b></a>
-      </li>
-      </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- Inline CSS -->
-  <section style="display: flex; flex-wrap: wrap; padding: 20px;">
-    <article style="flex: 70%; border-right: 1px solid rgb(181, 181, 181);">
-      <!-- TODO: add main content here -->
-      <title>Table Sortable</title>
-      <style>
-        table#your-table-items {
+  <style>
+    table#your-table-items {
           border-collapse: collapse;
           /* in inspector mode - easier to see the difference between collapse and no collapse */
           border: 1px solid rgba(154, 154, 154, 0.75);
@@ -136,10 +84,59 @@
           margin: 0 10px 0 0;
           border: 1px solid rgba(154, 154, 154, 0.75);
         }
-      </style>
-    </head>
-  
-    <body>
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="flex-container">
+      <!-- dropdown-menu -->
+      <nav id="navDropdown">
+        <div class="dropdown">
+          <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
+          <div class="dropdown-content">
+            font-family: "Font Family 1", sans-serif;
+            <a href="index.html"><b>{</b> Home <b>}</b></a>
+            <a href="page-2.html">Designers</a>
+            <a href="page-3.html">Trending</a>
+            <a href="#" class="active-menu-item"><b>{</b> Bestsellers <b>}</b></a>
+            <a href="page-5.html">On the Runway</a>
+            <a href="page-6.html">Year in Review</a>
+          </div>
+        </div>
+      </nav>
+      <!-- center logo -->
+      <nav id="navLogo"><a class="logo" href="#"></a></nav>
+      <!-- horizontal right -->
+      <nav id="navRight">
+      <ul style="padding-right: 20px;">
+      <li>
+      <a href="index.html"><b>|</b> Home <b>|</b></a>
+      </li>
+      <li>
+      <a href="page-2.html"><b>|</b> Designers <b>|</b></a>
+      </li>
+      <li>
+      <a href="page-3.html"><b>|</b> Trending <b>|</b></a>
+      </li>
+      <li>
+        <a href="#" class="active-page"><b>{</b> Best Sellers <b>}</b></a>
+      </li>
+      <li>
+      <a href="page-5.html"><b>|</b> On the Runway <b>|</b></a>
+      </li>
+      <li>
+      <a href="page-6.html"><b>|</b> Year in Review <b>|</b></a>
+      </li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Inline CSS -->
+  <section style="display: flex; flex-wrap: wrap; padding: 20px;">
+    <article style="flex: 70%; border-right: 1px solid rgb(181, 181, 181); padding-right: 20px;">
+      <!-- TODO: add main content here -->
+      <title>Table Sortable</title>
       <article>
         <div>
           <h1>Best Sellers</h1>
@@ -149,43 +146,78 @@
           <table id="your-table-items">
             <thead>
               <tr>
-                <th>Utensil</th>
+                <th>Ranking</th>
                 <th>Type</th>
-                <th>Name</th>
-                <th>Size</th>
+                <th>Fabric</th>
+                <th>Designer</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  <img src="./assets/images/blender-01.jpeg" alt="Blender" />
-                </td>
-                <td>Electronic Appliance</td>
-                <td>Blender</td>
-                <td>Big</td>
+                <td>#1</td>
+                <td>Dress</td>
+                <td>Cotton</td>
+                <td>Sophie Crawford</td>
               </tr>
               <tr>
-                <td>
-                  <img
-                    src="./assets/images/cutting-board-01.jpeg"
-                    alt="Cutting Board" />
-                </td>
-                <td>Hand Tool</td>
-                <td>Cutting Board</td>
-                <td>Small</td>
+                <td>#2</td>
+                <td>Skirt</td>
+                <td>Silk</td>
+                <td>Poppy Wraith</td>
               </tr>
               <tr>
-                <td>
-                  <img src="./assets/images/fry-pan-02.jpeg" alt="Fry Pan" />
-                </td>
-                <td>Cookware</td>
-                <td>Fry Pan</td>
-                <td>Medium</td>
+                <td>#3</td>
+                <td>Pants</td>
+                <td>Leather</td>
+                <td>Jackson Greaves</td>
+              </tr>
+              <tr>
+                <td>#4</td>
+                <td>Jacket</td>
+                <td>Denim</td>
+                <td>James Rowley</td>
+              </tr>
+              <tr>
+                <td>#5</td>
+                <td>Shirt</td>
+                <td>Cotton</td>
+                <td>Sophie Crawford</td>
+              </tr>
+              <tr>
+                <td>#6</td>
+                <td>Dress</td>
+                <td>Chiffon</td>
+                <td>Octavius Forge</td>
+              </tr>
+              <tr>
+                <td>#7</td>
+                <td>Skirt</td>
+                <td>Chiffon</td>
+                <td>James Rowley</td>
+              </tr>
+              <tr>
+                <td>#8</td>
+                <td>Pants</td>
+                <td>Denim</td>
+                <td>Poppy Wraith</td>
+              </tr>
+              <tr>
+                <td>#9</td>
+                <td>Jacket</td>
+                <td>Leather</td>
+                <td>Jackson Greaves</td>
+              </tr>
+              <tr>
+                <td>#10</td>
+                <td>Shirt</td>
+                <td>Silk</td>
+                <td>Octavius Forge</td>
               </tr>
             </tbody>
           </table>
-        </div>
+        </div
       </article>
+    </section>
       <!-- jquery.min.js should be loaded before jquery.tablesorter.min.js because tablesorter requires basice jquery -->
       <script
         type="text/JavaScript"
@@ -211,7 +243,6 @@
       <div>
         <!-- TODO: add sidebar content here -->
         <iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
-        hello class
       </div>
     </aside>
   </section>
