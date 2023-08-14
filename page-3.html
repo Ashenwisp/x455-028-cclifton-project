@@ -7,10 +7,71 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
   <title>Lux Couture</title>
+  <style>
+/* Set the background color for the whole page */
+body {
+      background-color: #F2F1F1;
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+    }
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2; /* Takes 2 parts of the available space */
+}
+
+.article {
+  flex: 1;
+  border-right: 1px solid rgb(181, 181, 181);
+  padding-right: 20px;
+  margin-right: 20px;
+  background-color: #F2F1F1;
+}
+
+.aside {
+  flex: 1; /* Takes 1 part of the available space */
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+  footer.flex-rw {
+    background-color: #373737; /* Set your desired background color here */
+    color: #fff; /* Set the text color */
+    padding: 20px; /* Add padding as needed */
+  }
+
+@media (max-width: 768px) {
+  .articles-container {
+    flex-direction: column;
+  }
+
+  .article, .aside {
+    flex: 100%;
+    border-right: none;
+    padding: 0;
+    margin: 0;
+  }
+
+    }
+    .banner {
+      background-image: url(../x455-028-cclifton-project/assets/images/banner.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding: 100px 0; /* Adjust as needed */
+      color: #fff; /* Text color on the banner */
+    }
+  </style>
 </head>
 
 <body>
   <header>
+    <div class="banner">
+      <!-- Your banner content goes here -->
+     <h1></h1>
+     <h2></h2>
+    </div>
     <div class="flex-container">
       <!-- dropdown-menu -->
       <nav id="navDropdown">
@@ -55,20 +116,33 @@
     </div>
   </header>
   <!-- Inline CSS -->
-  <section style="display: flex; flex-wrap: wrap; padding: 20px;">
-    <article style="flex: 70%; border-right: 1px solid rgb(181, 181, 181);">
+  <section class="flex-container">
+    <div class="articles-container">
+    <article class="article">
       <!-- TODO: add main content here -->
-      hello index.html
+      <h1>Trending</h1>
+      Spring Fashion Trends:
+As the flowers bloom, Lux Couture introduces the freshest spring trends that breathe new life into your wardrobe. Our collection embodies the spirit of the season with soft pastels, floral prints, and lightweight layers that capture the essence of rebirth. Step into the sunlight wearing flowy skirts and dresses that mirror the grace of the petals. Spring is the time to embrace the romance of lace, and at Lux Couture, we've got you covered with delicate designs that exude timeless elegance. And of course, spring wouldn't be complete without the resurgence of millennial pink, the hue that signifies renewal and optimism. From garden parties to brunch outings, Lux Couture celebrates the beauty of spring with every outfit.
+<ul>
+  <li>Soft pastels and floral prints</li>
+  <li>Flowy skirts and dresses</li>
+  <li>Embrace of millennial pink</li>
+</ul>
+</article>
+<article class="article">
+      <p>Get ready to turn up the heat this summer with Lux Couture's sizzling collection of the season's hottest trends. Dive into a world of vibrant colors, flowing fabrics, and bold patterns that embody the essence of the sun-soaked days. From the runway to your closet, our curated selection brings you the epitome of summer style. Picture yourself in breezy maxi dresses that dance with the wind, or slip into chic swimwear that makes a splash by the pool. And don't miss out on the revival of a classic: millennial pink, the color that effortlessly blends sophistication and playfulness. At Lux Couture, we're all about making summer memories in style.</p>
+      <ul>
+        <li>Vibrant colors and bold patterns</li>
+        <li>Breezy maxi dresses and chic swimwear</li>
+        <li>Revival of millennial pink</li>
+      </ul>
     </article>
-    <aside style="flex: 30%; padding-left: 20px;">
-      <div>
-        <!-- TODO: add sidebar content here -->
-        <iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
-        hello class
-      </div>
-    </aside>
-  </section>
-  <div class="to-top"><a href="#">Top</a></div>
+  </div>
+  <aside class="aside">
+    <iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
+  </aside>
+</section>
+
 <footer class="flex-rw">
   
     <ul class="footer-list-top">

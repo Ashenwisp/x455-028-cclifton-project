@@ -1,208 +1,158 @@
-/* Start https://www.cursors-4u.com */ 
-* {
-  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat945.ani), 
-  url(https://cur.cursors-4u.net/nature/nat-10/nat945.png), auto !important;
-}
-/* End https://www.cursors-4u.com */
-
+/* Global styles */
 * {
   box-sizing: border-box;
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat945.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat945.png), auto !important;
 }
 
 body {
   margin: 0;
-}
-
-@font-face {
-  font-family: "Font Family 1";
-  src: url(../fonts/Raleway-Black.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "Font Family 2";
-  src: url(../fonts/Merriweather-Black.ttf) format("truetype");
-}
-
-h1 {
-  font-family: "Font Family 2", sans-serif;
-  font-size: 50px;
-  margin: 0;
-}
-
-h2 {
-  font-family: "Font Family 2", sans-serif;
-  font-size: 30px;
-  margin: 0;
-}
-
-.splashcontainer {
+  font-family: Arial, sans-serif;
+  font-size: 18px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  background-color: #F2F1F1;
 }
 
-img {
-  max-width: 500px;
-}
-
-/*.image {
-  flex-basis: 70%;
-}*/
-
-.text {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
+/* Navigation styles */
 nav ul {
   list-style: none;
   margin: 0;
 } 
-  /* Ref: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_after_style */
-  /* inserts something after the content */
-  /* if removed, the content of next tag will be right next to the nav bar */
-  nav ul::after {
-    /* OR nav > ul::after --- ">" immediate after parent tag */
-    content: "";
-    display: block;
-    clear: both;
-    /* The element is pushed below both left and right floated elements. Ref: https://www.w3schools.com/cssref/pr_class_clear.asp */
-  }
-  
-  nav ul li a {
-    /* OR nav > ul > li > a --- ">" immediate after parent tag */
-    /* allows to set a width and height on the element, ref: https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1 */
-    background-color: #373737;
-    display: inline-block;
-    color: #80C525;
-    font-family: "Font Family 1", sans-serif;
-    font-size: 14.3px;
-    /* padding: top right bottom left */
-    padding: 10px 20px 10px 10px;
-    text-decoration: none;
-    width: auto;
-  }
+nav ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+nav ul li a {
+  background-color: #373737;
+  display: inline-block;
+  color: #80C525;
+  font-family: "Font Family 1", sans-serif;
+  font-size: 14.3px;
+  padding: 10px 20px 10px 10px;
+  text-decoration: none;
+  width: auto;
+}
+
 nav ul li a:hover {
   color: #ccc;
 }
-  /* top level */
-  nav>ul>li {
-    float: left;
-    /* make nav item align hortizontally */
-  }
+
+nav>ul>li {
+  float: left;
+}
+
+#navLogo {
+  padding: 5px 10px;
+  float: left;
+}
+
+a.logo {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: url(../images/logo.png) no-repeat 0 0;
+  background-size: contain;
+  float: left;
+}
   
-  #navLogo {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    float: left;
-  }
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #373737;
+}
+
+#navDropdown {
+  display: none;
+}
+
+.dropdown {
+  display: block;
+  left: 0;
+}
   
-  a.logo {
-    width: 50px;
-    height: 50px;
-    display: block;
-    background: url(../images/logo.png) no-repeat 0 0;
-    /* 0 0 are x,y coordination in relation to width and height setting */
-    background-size: contain;
-    float: left;
-  }
+.dropbtn {
+  background-color: rgba(0, 102, 102, 0);
+  color: #80C525;
+  padding: 16px;
+  font-family: "Font Family 1", sans-serif;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  line-height: normal;
+}
+
+.dropbtn:hover {
+  color: #F2F1F1;
+}
   
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #373737;
-  }
+.dropdown-content {
+  display: none;
+  font-family: "Font Family 1", sans-serif;
+  position: absolute;
+  background-color: #373737;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  font-family: "Font Family 1", sans-serif;
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  line-height: normal;
+}
   
-  #navDropdown {
-    display: none;
-  }
+.dropdown-content a:hover {
+  background-color: #80C525;
+  color: #000000 !important;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover {
+  background-color: #80C525;
+  color: #000000 !important;
+}
   
-  .dropdown {
-    display: block;
-    left: 0;
-  }
+.active-page {
+  background-color: #F2F1F1;
+  color: #000000 !important;
+}
+
+.active-menu-item {
+  background-color: #F2F1F1;
+  color: #000000 !important;
+}
   
-  .dropbtn {
-    background-color: rgba(0, 102, 102, 0);
-    color: #80C525;
-    padding: 16px;
-    font-family: "Font Family 1", sans-serif;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-    line-height: normal;
-  }
-  
-  .dropbtn:hover {
-    color: #F2F1F1;
-  }
-  
-  .dropdown-content {
-    display: none;
-    font-family: "Font Family 1", sans-serif;
-    /* set display to none, so dropdown menu won't show till hover dropdown */
-    position: absolute;
-    background-color: #373737;
-    min-width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    /*z-index: 1;*/
-  }
-  
-  .dropdown-content a {
-    font-family: "Font Family 1", sans-serif;
-    color: #ffffff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    line-height: normal;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #80C525;
-    color: #000000 !important;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover {
-    background-color: #80C525;
-    color: #000000 !important;
-  }
-  
-  .active-page {
-    background-color: #F2F1F1;
-    color: #000000 !important;
-  }
-    
-  .active-menu-item {
-    background-color: #F2F1F1;
-    color: #000000 !important;
-  }
-  
-  .to-top {
-    width: 100%;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .padding-right {
-    padding-right: 15px;
-  }
-  
-  footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
-  }
+.to-top {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.padding-right {
+  padding-right: 15px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+/* Additional global styles */
 * {
   box-sizing: border-box;
 }
@@ -221,6 +171,32 @@ body {
   flex-flow: column nowrap;
   justify-content: space-between;
   background-color: #F2F1F1;
+}
+
+/* Header and banner styles */
+.banner {
+  background-image: url(../x455-028-cclifton-project/assets/images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 100px 0;
+  color: #fff;
+}
+
+/* Article and aside styles */
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2;
+}
+
+.article, .aside {
+  flex: 1;
+  padding: 20px;
+  margin: 20px;
+  background-color: #F2F1F1;
+  border: 1px solid rgb(181, 181, 181);
 }
 
 .background-section {
