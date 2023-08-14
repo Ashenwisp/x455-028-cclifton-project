@@ -159,13 +159,13 @@
   .footer-content {
     display: flex;
     justify-content: space-between;
-    /* align-items: flex-start; */ /* Remove this line */
+    align-items: flex-start; /* Align items to the top */
     flex-wrap: wrap;
   }
   
   .social-icon {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-right: 10px;
   }
   
@@ -174,23 +174,27 @@
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    /* flex-grow: 1; */ /* Remove this line */
-    margin-top: 10px;
-    /* order: 2; */ /* Remove this line */
     width: 100%;
-    align-self: center;
+    margin-top: 0; /* Remove the margin-top */
+    order: 2;
+    align-items: flex-start;
   }
   
   .privacy-statement {
     color: #fff;
     font-size: 14px;
-    text-align: right;
-    /* flex-grow: 1; */ /* Remove this line */
-    margin-top: 10px;
-    /* order: 2; */ /* Remove this line */
-    align-self: flex-end;
-    width: 100%; /* Add this line */
+    text-align: center;
+    width: 100%;
+    margin-top: 0; /* Remove the margin-top */
+    order: 3; /* Change the order to 3 to place it on the right */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text to the top */
+    align-items: flex-end;
   }
+
+
+  
   
   
 
@@ -227,7 +231,25 @@
       height: 50px;
       padding-left: 10px;
     }
-  
+    {
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .social-icon {
+        margin-right: 0; /* Remove the right margin for social icons */
+        margin-bottom: 10px; /* Add a bottom margin for spacing */
+      }
+    
+      .lux-couture,
+      .privacy-statement {
+        order: 2; /* Change the order for responsive layout */
+        width: 100%;
+        text-align: center;
+      }
+    }
+    
 
   
   body {
