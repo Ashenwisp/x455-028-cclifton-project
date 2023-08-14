@@ -213,16 +213,21 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 18px;
+  font-size: 18px !;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-}
+    background-color: #F2F1F1;
+      background-image: url(../images/indexbackground.gif);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
 
-ul {
+ul, ol {
   list-style: none;
 }
 
@@ -468,11 +473,4 @@ footer {
     font-size: 1.3em;
   }
 }
-  
-body {
-  background-color: #F2F1F1;
-    background-image: url(../images/indexbackground.gif);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
