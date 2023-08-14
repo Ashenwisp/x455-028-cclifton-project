@@ -7,10 +7,53 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
   <title>Lux Couture</title>
+  <style>
+        .banner {
+      background-image: url(./assets/images/banner.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding: 100px 0; /* Adjust as needed */
+      color: #fff; /* Text color on the banner */
+    }
+    .page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the content takes up at least the full viewport height */
+  }
+    article {
+      width: 800px;
+      padding: 20px 100px;
+    }
+
+    .accordion {
+      color: #80C525;
+      cursor: pointer;
+      font-size: 15px;
+      padding-bottom: 10px;
+    }
+
+    .active,
+    .accordion:hover {
+      color: #80C525;
+    }
+
+    .panel {
+      display: none;
+      overflow: hidden;
+    }
+  </style>
 </head>
 
 <body>
   <header>
+    <div class="banner">
+      <!-- Your banner content goes here -->
+     <h1></h1>
+     <h2></h2>
+    </div>
     <div class="flex-container">
       <!-- dropdown-menu -->
       <nav id="navDropdown">
@@ -54,21 +97,76 @@
       </nav>
     </div>
   </header>
-  <!-- Inline CSS -->
-  <section style="display: flex; flex-wrap: wrap; padding: 20px;">
-    <article style="flex: 70%; border-right: 1px solid rgb(181, 181, 181);">
-      <!-- TODO: add main content here -->
-      hello index.html
-    </article>
-    <aside style="flex: 30%; padding-left: 20px;">
-      <div>
-        <!-- TODO: add sidebar content here -->
-        <iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
-        hello class
+  <div class="page-container">
+  <article>
+    <h1>On the Runway</h1>
+    <h2>2020s in Fashion</h2>
+    <div>
+      <p>
+        The fashions of the 2020s represent a departure from 2010s fashion and feature a nostalgia for older aesthetics. They have been largely inspired by styles of the early to mid-2000s, late 1990s, 1980s, 1970s, and 1960s. Early in the decade, several publications noted the shortened trend and nostalgia cycle in 2020s fashion.<br>Source: <a href="https://en.wikipedia.org/wiki/2020s_in_fashion">Wikipedia.</a>
+      </p>
+      <div class="panel">
+        <span style="width: 800px; word-wrap: break-word;">
+          <h2>Best Runway Moments of 2020</h2>
+          <iframe width="800" height="504" src="https://www.youtube.com/watch?v=2jKHaCLaepc"
+            title="Best Runway Moments of 2020" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+          </iframe>
+        </span>
       </div>
-    </aside>
-  </section>
-  <div class="to-top"><a href="#">Top</a></div>
+      <div class="accordion" style="text-align: right;">More</div>
+    </div>
+    <h2>Vittoria Ceretti</h2>
+    <div>
+      <p>Vittoria Ceretti is an Italian model. Ceretti was discovered in 2012 through the Elite Model Look Model contest. Models.com ranks Ceretti as one of the "New Supers" of this generation.
+        <br>Source: <a href="https://en.wikipedia.org/wiki/Vittoria_Ceretti">Wikipedia.</a>
+      </p>
+      <div class="panel">
+        <span style="width: 800px; word-wrap: break-word;">
+          <h2>Vittoria Ceretti | Runway Collection</h2>
+          <iframe width="800" height="504" src="https://www.youtube.com/watch?v=fD_0XtfeaLE"
+            title="Vittoria Ceretti | Runway Collection" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+          </iframe>
+        </span>
+      </div>
+      <div class="accordion" style="text-align: right;">More</div>
+    </div>
+    <h2>Anok Yai</h2>
+    <div>
+      <p>
+        Anok Yai is an American fashion model. She is the first South Sudanese model and the second black model after Naomi Campbell to open a Prada show. She has made several appearances on i-D and international Vogue covers, including American Vogue three times. Models.com ranks her as one of the "New Supers" of this generation.<br>Source: <a href="https://en.wikipedia.org/wiki/Anok_Yai">Wikipedia.</a>
+      </p>
+      <div class="panel">
+        <span style="width: 800px; word-wrap: break-word;">
+          <h2>Anok Yai | Top 10 Runway Moments</h2>
+          <iframe width="800" height="504" src="https://www.youtube.com/watch?v=wulAy-x-PwA"
+            title="Anok Yai | Top 10 Runway Moments" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+          </iframe>
+        </span>
+      </div>
+      <div class="accordion" style="text-align: right;">More</div>
+    </div>
+  </article>
+</body>
+<!-- BEG JavaScript -->
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.previousElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+        this.innerHTML = "More";
+      } else {
+        panel.style.display = "block";
+        this.innerHTML = "Less";
+      }
+    });
+  }
+</script>
+<!-- END JavaScript -->
+</div>
 <footer class="flex-rw">
   
     <ul class="footer-list-top">
