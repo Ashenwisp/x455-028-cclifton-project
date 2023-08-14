@@ -42,7 +42,7 @@ img {
 }
 
 .image {
-  flex-basis: 40%
+  flex-basis: 60%
 }
 
 .text {
@@ -207,7 +207,7 @@ html, body {
 }
 
 body {
-  font: 11px "Open Sans", sans-serif;
+  font: 14px "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: auto;
