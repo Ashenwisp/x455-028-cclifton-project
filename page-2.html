@@ -12,37 +12,67 @@
 
   <title>Lux Couture</title>
   <style>
-    
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    /* Text styles */
     .text {
       max-width: 500px;
       font-size: 16px;
+      text-align: center;
     }
-    
+  
+    /* Layout styles */
+    .splashcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+  
+    .carousel-container {
+      flex: 1;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .text-container {
+      flex: 1;
+      max-width: 500px;
+      font-size: 16px;
+      overflow-y: auto;
+      max-height: 300px;
+      padding: 0 20px;
+    }
+  
+    aside {
+      flex: 1;
+      padding-left: 20px;
+    }
+  
+    /* Responsive styles */
     @media (max-width: 768px) {
-      .splashcontainer {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .image, .text {
+      .carousel-container,
+      .text-container,
+      aside {
+        flex: 1;
         padding: 0;
-        text-align: center;
-      }
-      
-      .image, .text, aside {
+        max-width: none;
         width: 100%;
       }
-    }
-    .banner {
-      background-image: url(../x455-028-cclifton-project/assets/images/banner.jpg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      text-align: center;
-      padding: 100px 0; /* Adjust as needed */
-      color: #fff; /* Text color on the banner */
+  
+      .carousel-container {
+        flex-direction: column; /* Change flex direction to stack vertically */
+        align-items: center; /* Center align items horizontally */
+      }
     }
   </style>
+  
 </head>
 
 <body>
@@ -95,15 +125,10 @@
       </nav>
     </div>
   </header>
-  <!-- Inline CSS -->
-  <section style="display: flex; flex-wrap: wrap; padding: 20px;">
-    <article style="flex: 70%; border-right: 1px solid rgb(181, 181, 181);">
-      <section style="display: flex; flex-wrap: wrap; padding: 20px;">
-        <article style="border-right: 1px solid rgb(181, 181, 181);">
-          <div class="splashcontainer">
-      <section>
-        <!-- Carousel -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+<h1>New Designers</h1>
+<section class="splashcontainer">
+    <div class="carousel-container">
+                <!-- Carousel Content -->
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -128,10 +153,7 @@
               <img src="./assets/images/carousel4.jpg" alt="Tanya Lawrence">
             </div>
             <div class="item">
-              <img src="./assets/images/carousel5.jpg" alt="Layla Danes">
-            </div>
-          </div>
-        
+              <img src="./assets/images/carousel5.jpg" alt="Layla Danes">        
           <!-- Left and right controls -->
           <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
@@ -142,16 +164,17 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+        <div class="text-container">
+ <div class="text">Lux Couture is excited to introduce a fresh wave of talented, young designers who are changing the fashion game. These rising stars are all about mixing classic elegance with new ideas, creating outfits that stand out.<p>
+
+          They're taking inspiration from everything – from old traditions to the latest tech trends – and combining it with top-notch craftsmanship and amazing fabrics. Lux Couture is giving these designers a platform to show off their work and grow, because they believe that the future of fashion is in their hands.<p>
+          
+          Lux Couture is all about celebrating creativity and giving these new designers a chance to shine. With their cool ideas and dedication, they're showing the world that luxury fashion is changing for the better.</div>
+        </div>
       </div>
-      <div class="text">TEST</div>
-      </section>
-    </article>
-  <aside style="flex: 30%; padding-left: 20px;">
-      <div>
+    <aside>
         <!-- TODO: add sidebar content here -->
         <iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
-        hello class
-      </div>
     </aside>
   </section>
 <footer class="flex-rw">
