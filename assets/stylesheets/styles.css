@@ -38,7 +38,7 @@ h2 {
 }
 
 img {
-  max-width: 300px
+  max-width: 500px
 }
 
 .image {
@@ -46,7 +46,6 @@ img {
 }
 
 .text {
-  font-size: 20px;
   padding-left: 20px;
 }
   nav ul {
