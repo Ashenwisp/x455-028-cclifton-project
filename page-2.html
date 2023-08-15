@@ -8,14 +8,14 @@
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css">
   <title>Lux Couture</title>
   <style>
-/* Set the background color for the whole page */
-
+/* Article Container */
 .articles-container {
   display: flex;
   flex-wrap: wrap;
   flex: 2; /* Takes 2 parts of the available space */
 }
 
+/* Individual Article */
 .article {
   flex-basis: calc(50% - 30%);
   border-right: 1px solid rgb(181, 181, 181);
@@ -24,57 +24,56 @@
   background-color: #F2F1F1;
 }
 
+/* Lists inside Text */
 .text ul {
   list-style: disc; /* Change to 'disc' for regular bullets */
   margin-left: 20px; /* Add some left margin for indentation */
   padding-left: 20px; /* Add padding for spacing */
 }
 
+/* Aside */
 .aside {
   flex: 1; /* Takes 1 part of the available space */
   padding-left: 20px;
   margin-left: 20px;
 }
 
-  footer.flex-rw {
-    background-color: #373737; /* Set your desired background color here */
-    color: #fff; /* Set the text color */
-    padding: 20px; /* Add padding as needed */
-    flex-shrink: 0;
-  }
-
-  .text {
+/* Text Container */
+.text {
   max-width: 500px;
   font-size: 16px;
   overflow: auto;
 }
 
+/* Splash Container */
 .splashcontainer {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-    }
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
 
-    @media (max-width: 768px) {
-      .splashcontainer {
-        flex-direction: column;
-        align-items: center;
-      }
-      .text, aside {
-        flex-basis: unset;
-        width: 100%;
-      }
-    }
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .splashcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text, .aside {
+    flex-basis: unset;
+    width: 100%;
+  }
+}
 
-    .banner {
-      background-image: url(./x455-028-cclifton-project/assets/images/banner.jpg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      text-align: center;
-      padding: 100px 0; /* Adjust as needed */
-      color: #fff; /* Text color on the banner */
-    }
+/* Banner */
+.banner {
+  background-image: url(./assets/images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 100px 0; /* Adjust as needed */
+  color: #fff; /* Text color on the banner */
+}
 
   </style>
 </head>
