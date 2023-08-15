@@ -9,26 +9,38 @@
   <title>Lux Couture</title>
   <style>
     
+    body {
+      background-color: #F2F1F1;
+      margin: 0;
+      padding: 0;
+    }
+
     .text {
       max-width: 500px;
       font-size: 16px;
     }
-    
+
+    .splashcontainer {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
     @media (max-width: 768px) {
       .splashcontainer {
         flex-direction: column;
         align-items: center;
       }
 
-      .image, .text {
-        padding: 0;
-        text-align: center;
-      }
-      
       .image, .text, aside {
         width: 100%;
       }
+
+      .text, aside {
+        flex-basis: unset;
+        max-width: 100%;
+      }
     }
+
     .banner {
       background-image: url(../x455-028-cclifton-project/assets/images/banner.jpg);
       background-size: cover;
@@ -95,7 +107,7 @@
     <article style="border-right: 1px solid rgb(181, 181, 181);">
       <div class="splashcontainer">
         <div class="image">
-          <img src="../x455-028-cclifton-project/assets/images/splash.jpg">
+          <img src="../x455-028-cclifton-project/assets/images/splash.jpg" alt="Splash Image">
         </div>
         <div class="text">
           <h1>Lux Couture</h1>
@@ -113,22 +125,7 @@
       </div>
     </aside>
   </section>
-  <style>
-  @media (max-width: 768px) {
-    .splashcontainer {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .image, .text {
-      padding: 0;
-      text-align: center;
-    }
-  }
-  </style>
-  
-  
-<footer class="flex-rw">
+  <footer class="flex-rw">
     <ul class="footer-list-top">
       <li>
         <h4 class="footer-list-header">Lux Couture</h4></li>

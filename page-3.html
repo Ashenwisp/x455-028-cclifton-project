@@ -21,7 +21,7 @@ body {
 }
 
 .article {
-  flex: 1;
+  flex-basis: calc(50%-30%);
   border-right: 1px solid rgb(181, 181, 181);
   padding-right: 20px;
   margin-right: 20px;
@@ -38,6 +38,7 @@ body {
     background-color: #373737; /* Set your desired background color here */
     color: #fff; /* Set the text color */
     padding: 20px; /* Add padding as needed */
+    flex-shrink: 0;
   }
 
 @media (max-width: 768px) {
@@ -78,7 +79,6 @@ body {
         <div class="dropdown">
           <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
           <div class="dropdown-content">
-            font-family: "Font Family 1", sans-serif;
             <a href="index.html">Home</a>
             <a href="page-2.html">Designers</a>
             <a href="#" class="active-menu-item"><b>{</b> Trending <b>}</b></a>
