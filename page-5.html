@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   <link rel="icon" type="image/png" href="./assets/images/logo.png"/>
@@ -8,7 +7,12 @@
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
   <title>Lux Couture</title>
   <style>
-        .banner {
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F2F1F1;
+    }
+    .banner {
       background-image: url(./assets/images/banner.jpg);
       background-size: cover;
       background-position: center;
@@ -16,6 +20,13 @@
       text-align: center;
       padding: 100px 0; /* Adjust as needed */
       color: #fff; /* Text color on the banner */
+    }
+
+    .flex-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
     }
 
     .accordion {
@@ -84,8 +95,9 @@
       </ul>
       </nav>
     </div>
-  </header><center>
-  <h1>On the Runway</h1>
+  </header>
+  <center>
+    <h1>On the Runway</h1>
     <h2>2020s in Fashion</h2>
     <div>
       <p style="max-width: 800px;">The fashions of the 2020s represent a departure from 2010s fashion and feature a nostalgia for older aesthetics. They have been largely inspired by styles of the early to mid-2000s, late 1990s, 1980s, 1970s, and 1960s. Early in the decade, several publications noted the shortened trend and nostalgia cycle in 2020s fashion.<br>Source: <a href="https://en.wikipedia.org/wiki/2020s_in_fashion">Wikipedia.</a>
@@ -131,14 +143,13 @@
     </div>
   </div>
 </body>
-<!-- BEG JavaScript -->
 <script>
   var acc = document.getElementsByClassName("accordion");
   var i;
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
       this.classList.toggle("active");
-      var panel = this.previousElementSibling;
+      var panel = this.nextElementSibling;
       if (panel.style.display === "block") {
         panel.style.display = "none";
         this.innerHTML = "More";
@@ -150,7 +161,12 @@
   }
 </script>
 <!-- END JavaScript -->
-</div></center>
+</center>
+</body>
+</html>
+
+I've modified the structure and added a body style to set the background color and margins to zero. I've also adjusted the .flex-container to have proper alignment and spacing. You can add the rest of your CSS styles back into the provided structure. This should help resolve the background bleeding issue and ensure a more organized layout. Remember to adjust the styles according to your design preferences.
+
 <footer class="flex-rw">
   
     <ul class="footer-list-top">
