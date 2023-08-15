@@ -55,20 +55,61 @@
     </div>
   </header>
   <!-- Inline CSS -->
-  <section style="display: flex; flex-wrap: wrap; padding: 20px;">
+  <section style="display: flex; padding: 20px;">
     <article style="flex: 70%; border-right: 1px solid rgb(181, 181, 181);">
-      <!-- TODO: add main content here -->
-      hello index.html
+      <!-- Your main article content here -->
+      <section class="lightbox-container">
+        <!-- Your lightbox content here -->
+        <div class="lightbox-trigger">
+          <img src="./assets/images/lightbox1.jpg" alt="Image 1">
+        </div>
+        <div class="lightbox-trigger">
+          <img src="./assets/images/lightbox2.jpg" alt="Image 2">
+        </div>
+        <!-- rest of images -->
+      </section>
+      <div class="lightbox-overlay">
+        <div class="lightbox-content">
+          <span class="lightbox-close">&times;</span>
+          <img class="lightbox-image" src="" alt="Lightbox Image">
+        </div>
+      </div>
     </article>
+    
     <aside style="flex: 30%; padding-left: 20px;">
+      <!-- Your aside content here -->
       <div>
-        <!-- TODO: add sidebar content here -->
         <iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
-        hello class
       </div>
     </aside>
   </section>
-  <div class="to-top"><a href="#">Top</a></div>
+  <div class="lightbox-overlay">
+    <div class="lightbox-content">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-image" src="" alt="Lightbox Image">
+    </div>
+  </div>
+  
+  <script>
+    const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+    const lightboxOverlay = document.querySelector('.lightbox-overlay');
+    const lightboxImage = document.querySelector('.lightbox-image');
+    
+    lightboxTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const imageSrc = trigger.querySelector('img').src;
+        lightboxImage.src = imageSrc;
+        lightboxOverlay.classList.add('show');
+      });
+    });
+    
+    const lightboxClose = document.querySelector('.lightbox-close');
+    lightboxClose.addEventListener('click', () => {
+      lightboxOverlay.classList.remove('show');
+    });
+  </script>
+</body>
+</html>
 <footer class="flex-rw">
   
     <ul class="footer-list-top">
