@@ -7,11 +7,6 @@
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
   <title>Lux Couture</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #F2F1F1;
-    }
     .banner {
       background-image: url(./assets/images/banner.jpg);
       background-size: cover;
@@ -21,16 +16,17 @@
       padding: 100px 0; /* Adjust as needed */
       color: #fff; /* Text color on the banner */
     }
-
-    .flex-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
+    
+      article {
+      width: 600px;
+      padding: 20px 100px;
     }
-
+      article {
+      width: 600px;
+      padding: 20px 100px;
+    }
     .accordion {
-      color: #80C525;
+      color: #80c525;
       cursor: pointer;
       font-size: 15px;
       padding-bottom: 10px;
@@ -38,11 +34,12 @@
 
     .active,
     .accordion:hover {
-      color: #80C525;
+      color: #80c525;
     }
 
     .panel {
       display: none;
+      overflow: hidden;
     }
   </style>
 </head>
@@ -96,60 +93,66 @@
       </nav>
     </div>
   </header>
-  <center>
+  <body>
     <h1>On the Runway</h1>
+    <article>
     <h2>2020s in Fashion</h2>
     <div>
-      <p style="max-width: 800px;">The fashions of the 2020s represent a departure from 2010s fashion and feature a nostalgia for older aesthetics. They have been largely inspired by styles of the early to mid-2000s, late 1990s, 1980s, 1970s, and 1960s. Early in the decade, several publications noted the shortened trend and nostalgia cycle in 2020s fashion.<br>Source: <a href="https://en.wikipedia.org/wiki/2020s_in_fashion">Wikipedia.</a>
-      </p>
-      <div class="panel">
+      <p>
+      The fashions of the 2020s represent a departure from 2010s fashion and feature a nostalgia for older aesthetics. They have been largely inspired by styles of the early to mid-2000s, late 1990s, 1980s, 1970s, and 1960s. Early in the decade, several publications noted the shortened trend and nostalgia cycle in 2020s fashion.<br>Source: <a href="https://en.wikipedia.org/wiki/2020s_in_fashion">Wikipedia.</a>
+     </p>
+     <div class="panel">
+      <span style="width: 500px; word-wrap: break-word;">
           <h2>Best Runway Moments of 2020</h2>
-          <iframe width="100%" height="100%" style="max-width: 800px;" src="https://www.youtube.com/embed/2jKHaCLaepc"
+          <iframe width="500" height="315" src="https://www.youtube.com/embed/2jKHaCLaepc"
             title="Best Runway Moments of 2020" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
           </iframe>
         </span>
       </div>
-      <div class="accordion" style="text-align: center;">More</div>
+      <div class="accordion" style="text-align: right;">More</div>
     </div>
+  </article>
+  <article>
     <h2>Vittoria Ceretti</h2>
     <div>
-      <p style="max-width: 800px;">Vittoria Ceretti is an Italian model. Ceretti was discovered in 2012 through the Elite Model Look Model contest. Models.com ranks Ceretti as one of the "New Supers" of this generation.
+      <p>Vittoria Ceretti is an Italian model. Ceretti was discovered in 2012 through the Elite Model Look Model contest. Models.com ranks Ceretti as one of the "New Supers" of this generation.
         <br>Source: <a href="https://en.wikipedia.org/wiki/Vittoria_Ceretti">Wikipedia.</a>
       </p>
       <div class="panel">
-        <span style="width: 600px; word-wrap: break-word;">
+        <span style="width: 500px; word-wrap: break-word;">
           <h2>Vittoria Ceretti | Runway Collection</h2>
-          <iframe width="100%" height="100%" style="max-width: 800px;" src="https://www.youtube.com/embed/fD_0XtfeaLE"
+          <iframe width="500" height="315" src="https://www.youtube.com/embed/fD_0XtfeaLE"
             title="Vittoria Ceretti | Runway Collection" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
           </iframe>
         </span>
       </div>
-      <div class="accordion" style="text-align: center;">More</div>
+      <div class="accordion" style="text-align: right;">More</div>
     </div>
+  </article>
+  <article>
     <h2>Anok Yai</h2>
     <div>
-      <p style="max-width: 800px;">
+      <p>
         Anok Yai is an American fashion model. She is the first South Sudanese model and the second black model after Naomi Campbell to open a Prada show. She has made several appearances on i-D and international Vogue covers, including American Vogue three times. Models.com ranks her as one of the "New Supers" of this generation.<br>Source: <a href="https://en.wikipedia.org/wiki/Anok_Yai">Wikipedia.</a>
       </p>
       <div class="panel">
-        <span style="width: 800px; word-wrap: break-word;">
+        <span style="width: 500px; word-wrap: break-word;">
           <h2>Anok Yai | Top 10 Runway Moments</h2>
-          <iframe width="100%" height="100%" style="max-width: 800px;" src="https://www.youtube.com/embed/wulAy-x-PwA"
+          <iframe width="500" height="315" src="https://www.youtube.com/embed/wulAy-x-PwA"
             title="Anok Yai | Top 10 Runway Moments" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
           </iframe>
         </span>
       </div>
-      <div class="accordion" style="text-align: center;">More</div>
-    </div>
+      <div class="accordion" style="text-align: right;">More</div>
   </div>
-</body>
+</article>
 <script>
   var acc = document.getElementsByClassName("accordion");
   var i;
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
       this.classList.toggle("active");
-      var panel = this.nextElementSibling;
+      var panel = this.previousElementSibling;
       if (panel.style.display === "block") {
         panel.style.display = "none";
         this.innerHTML = "More";
@@ -162,10 +165,6 @@
 </script>
 <!-- END JavaScript -->
 </center>
-</body>
-</html>
-
-I've modified the structure and added a body style to set the background color and margins to zero. I've also adjusted the .flex-container to have proper alignment and spacing. You can add the rest of your CSS styles back into the provided structure. This should help resolve the background bleeding issue and ensure a more organized layout. Remember to adjust the styles according to your design preferences.
 
 <footer class="flex-rw">
   
