@@ -14,27 +14,33 @@
   <style>
     
     .text {
-  max-width: 500px;
-  font-size: 16px;
-  height: 300px; /* Set the height */
-  overflow: auto; /* Add this line */
-}
-    
+      max-width: 500px;
+      font-size: 16px;
+      height: 300px; /* Set the height */
+      overflow: auto; /* Add this line */
+    }
+
+    .splashcontainer {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
     @media (max-width: 768px) {
       .splashcontainer {
         flex-direction: column;
         align-items: center;
       }
-
-      .image, .text {
-        padding: 0;
-        text-align: center;
-      }
-      
       .image, .text, aside {
         width: 100%;
       }
+
+      .text, aside {
+        flex-basis: unset;
+        max-width: 100%;
+      }
     }
+
     .banner {
       background-image: url(../x455-028-cclifton-project/assets/images/banner.jpg);
       background-size: cover;
@@ -97,14 +103,13 @@
       </nav>
     </div>
   </header>
-  <!-- Inline CSS -->
   <section style="display: flex; flex-wrap: wrap; padding: 20px;">
     <article style="flex: 70%; border-right: 1px solid rgb(181, 181, 181);">
       <section style="display: flex; flex-wrap: wrap; padding: 20px;">
         <article style="border-right: 1px solid rgb(181, 181, 181);">
           <div class="splashcontainer">
-      <section>
-        <h1>Designers</h1>
+            <section>
+              <h1>Designers</h1>
         <!-- Carousel -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
@@ -145,20 +150,23 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-      </div>
+        </section>
       <div class="text">Lux Couture is excited to introduce a fresh wave of talented, young designers who are changing the fashion game. These rising stars are all about mixing classic elegance with new ideas, creating outfits that stand out.<p>
 
           They're taking inspiration from everything – from old traditions to the latest tech trends – and combining it with top-notch craftsmanship and amazing fabrics. Lux Couture is giving these designers a platform to show off their work and grow, because they believe that the future of fashion is in their hands.<p>
           
           Lux Couture is all about celebrating creativity and giving these new designers a chance to shine. With their cool ideas and dedication, they're showing the world that luxury fashion is changing for the better.</div>
-      </section>
+          </div>
+        </div>
     </article>
-  <aside style="flex: 30%; padding-left: 20px;">
+    <aside style="flex: 30%; padding-left: 20px;">
       <div>
         <!-- TODO: add sidebar content here -->
         <iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
       </div>
     </aside>
+  </section>
+  </article>
   </section>
 <footer class="flex-rw">
   
