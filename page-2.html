@@ -9,11 +9,7 @@
   <title>Lux Couture</title>
   <style>
 /* Set the background color for the whole page */
-body {
-      background-color: #F2F1F1;
-      margin: 0; /* Remove default margin */
-      padding: 0; /* Remove default padding */
-    }
+
 .articles-container {
   display: flex;
   flex-wrap: wrap;
@@ -46,13 +42,14 @@ body {
     padding: 20px; /* Add padding as needed */
     flex-shrink: 0;
   }
+
   .text {
   max-width: 500px;
   font-size: 16px;
   overflow: auto;
 }
 
-    .splashcontainer {
+.splashcontainer {
       display: flex;
       align-items: flex-start;
       gap: 20px;
@@ -63,15 +60,14 @@ body {
         flex-direction: column;
         align-items: center;
       }
-      .article, .aside {
-        flex: 100%;
-        border-right: none;
-        padding: 0;
-        margin: 0;
+      .text, aside {
+        flex-basis: unset;
+        width: 100%;
       }
     }
+
     .banner {
-      background-image: url(../x455-028-cclifton-project/assets/images/banner.jpg);
+      background-image: url(./x455-028-cclifton-project/assets/images/banner.jpg);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -79,6 +75,7 @@ body {
       padding: 100px 0; /* Adjust as needed */
       color: #fff; /* Text color on the banner */
     }
+
   </style>
 </head>
 
