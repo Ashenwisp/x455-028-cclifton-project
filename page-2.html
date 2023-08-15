@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" type="image/png" href="./assets/images/logo.png"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css"/>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  <link rel="icon" type="image/png" href="./assets/images/logo.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css">
   <title>Lux Couture</title>
   <style>
-    
-    .text {
-      max-width: 500px;
-      font-size: 16px;
-      height: 300px; /* Set the height */
-      overflow: auto; /* Add this line */
+/* Set the background color for the whole page */
+body {
+      background-color: #F2F1F1;
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
     }
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2; /* Takes 2 parts of the available space */
+}
+
+.article {
+  flex-basis: calc(50% - 30%);
+  border-right: 1px solid rgb(181, 181, 181);
+  padding-right: 20px;
+  margin-right: 20px;
+  background-color: #F2F1F1;
+}
+
+.aside {
+  flex: 1; /* Takes 1 part of the available space */
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+  footer.flex-rw {
+    background-color: #373737; /* Set your desired background color here */
+    color: #fff; /* Set the text color */
+    padding: 20px; /* Add padding as needed */
+    flex-shrink: 0;
+  }
+  .text {
+  max-width: 500px;
+  font-size: 16px;
+  overflow: auto;
+}
 
     .splashcontainer {
       display: flex;
@@ -31,16 +57,13 @@
         flex-direction: column;
         align-items: center;
       }
-      .image, .text, aside {
-        width: 100%;
-      }
-
-      .text, aside {
-        flex-basis: unset;
-        max-width: 100%;
+      .article, .aside {
+        flex: 100%;
+        border-right: none;
+        padding: 0;
+        margin: 0;
       }
     }
-
     .banner {
       background-image: url(../x455-028-cclifton-project/assets/images/banner.jpg);
       background-size: cover;
@@ -55,21 +78,20 @@
 
 <body>
   <header>
-      <div class="banner">
-        <!-- Your banner content goes here -->
-       <h1></h1>
-       <h2></h2>
-      </div>
+    <div class="banner">
+      <!-- Your banner content goes here -->
+     <h1></h1>
+     <h2></h2>
+    </div>
     <div class="flex-container">
       <!-- dropdown-menu -->
       <nav id="navDropdown">
         <div class="dropdown">
           <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
           <div class="dropdown-content">
-            font-family: "Font Family 1", sans-serif;
             <a href="index.html">Home</a>
-            <a href="#" class="active-menu-item"><b>{</b> Designers <b>}</b></a>
-            <a href="page-3.html">Trending</a>
+            <a href="page-2.html">Designers</a>
+            <a href="#" class="active-menu-item"><b>{</b> Trending <b>}</b></a>
             <a href="page-4.html">Best Sellers</a>
             <a href="page-5.html">On the Runway</a>
             <a href="page-6.html">Year in Review</a>
@@ -77,7 +99,7 @@
         </div>
       </nav>
       <!-- center logo -->
-      <nav id="navLogo"><a class="logo" href="index.html"></a></nav>
+      <nav id="navLogo"><a class="logo" href="#"></a></nav>
       <!-- horizontal right -->
       <nav id="navRight">
       <ul style="padding-right: 20px;">
@@ -85,10 +107,10 @@
       <a href="index.html"><b>|</b> Home <b>|</b></a>
       </li>
       <li>
-        <a href="#" class="active-page"><b>{</b> Designers <b>}</b></a>
+      <a href="page-2.html"><b>|</b> Designers <b>|</b></a>
       </li>
       <li>
-      <a href="page-3.html"><b>|</b> Trending <b>|</b></a>
+        <a href="#" class="active-page"><b>{</b> Trending <b>}</b></a>
       </li>
       <li>
       <a href="page-4.html"><b>|</b> Best Sellers <b>|</b></a>
@@ -103,71 +125,53 @@
       </nav>
     </div>
   </header>
-  <section style="display: flex; flex-wrap: wrap; padding: 20px;">
-    <article style="flex: 70%; border-right: 1px solid rgb(181, 181, 181);">
-      <section style="display: flex; flex-wrap: wrap; padding: 20px;">
-        <article style="border-right: 1px solid rgb(181, 181, 181);">
-          <div class="splashcontainer">
-            <section>
-              <h1>Designers</h1>
-        <!-- Carousel -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-        
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="./assets/images/carousel1.jpg" alt="David Smith">
-            </div>
-        
-            <div class="item">
-              <img src="./assets/images/carousel2.jpg" alt="Jack Williams">
-            </div>
-        
-            <div class="item">
-              <img src="./assets/images/carousel3.jpg" alt="Marie Phillips">
-            </div>
-            <div class="item">
-              <img src="./assets/images/carousel4.jpg" alt="Tanya Lawrence">
-            </div>
-            <div class="item">
-              <img src="./assets/images/carousel5.jpg" alt="Layla Danes">
-            </div>
-          </div>
-        
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-        </section>
-      <div class="text">Lux Couture is excited to introduce a fresh wave of talented, young designers who are changing the fashion game. These rising stars are all about mixing classic elegance with new ideas, creating outfits that stand out.<p>
+  <!-- Inline CSS -->
+  <section class="flex-container">
+    <div class="articles-container">
+      <article class="article">
+        <div class="splashcontainer">
+          <section>
+            <!-- Your article content goes here -->
+          </section>
+          <div class="text">
+      <h1>Trending</h1>
+      <h2>Spring Fashion Trends</h2>
+As the flowers bloom, Lux Couture introduces the freshest spring trends that breathe new life into your wardrobe. Our collection embodies the spirit of the season with soft pastels, floral prints, and lightweight layers that capture the essence of rebirth. Step into the sunlight wearing flowy skirts and dresses that mirror the grace of the petals. Spring is the time to embrace the romance of lace, and at Lux Couture, we've got you covered with delicate designs that exude timeless elegance. And of course, spring wouldn't be complete without the resurgence of millennial pink, the hue that signifies renewal and optimism. From garden parties to brunch outings, Lux Couture celebrates the beauty of spring with every outfit.
+<ul>
+  <li>Soft pastels and floral prints</li>
+  <li>Flowy skirts and dresses</li>
+  <li>Embrace of millennial pink</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="article">
+<div class="splashcontainer">
+  <section>
+    <!-- Your article content goes here -->
+  </section>
+  <div class="text">
+  <h2>Summer Fashion Trends</h2>
+      <p>Get ready to turn up the heat this summer with Lux Couture's sizzling collection of the season's hottest trends. Dive into a world of vibrant colors, flowing fabrics, and bold patterns that embody the essence of the sun-soaked days. From the runway to your closet, our curated selection brings you the epitome of summer style. Picture yourself in breezy maxi dresses that dance with the wind, or slip into chic swimwear that makes a splash by the pool. And don't miss out on the revival of a classic: millennial pink, the color that effortlessly blends sophistication and playfulness. At Lux Couture, we're all about making summer memories in style.</p>
+      <ul>
+        <li>Vibrant colors and bold patterns</li>
+        <li>Breezy maxi dresses and chic swimwear</li>
+        <li>Revival of millennial pink</li>
+      </ul>
+    </div>
+  </div>
+</article>
+</div>
+<aside class="aside">
+<div class="splashcontainer">
+  <div>
+    <!-- Your aside content goes here -->
+    <iframe allow="autoplay" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
+  </div>
+</div>
+</aside>
+</section>
 
-          They're taking inspiration from everything – from old traditions to the latest tech trends – and combining it with top-notch craftsmanship and amazing fabrics. Lux Couture is giving these designers a platform to show off their work and grow, because they believe that the future of fashion is in their hands.<p>
-          
-          Lux Couture is all about celebrating creativity and giving these new designers a chance to shine. With their cool ideas and dedication, they're showing the world that luxury fashion is changing for the better.</div>
-          </div>
-        </div>
-    </article>
-    <aside style="flex: 30%; padding-left: 20px;">
-      <div>
-        <!-- TODO: add sidebar content here -->
-        <iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
-      </div>
-    </aside>
-  </section>
-  </article>
-  </section>
 <footer class="flex-rw">
   
     <ul class="footer-list-top">
@@ -211,5 +215,6 @@
         </div>
     </section>
   </footer>
+
 </body>
 </html>
