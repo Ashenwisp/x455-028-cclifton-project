@@ -1,25 +1,99 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <link rel="icon" type="image/png" href="./assets/images/logo.png"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="./assets/images/logo.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/styles.css">
   <title>Lux Couture</title>
-</head>
+  <style>
+/* Article Container */
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2; /* Takes 2 parts of the available space */
+}
 
+/* Individual Article */
+.article {
+  flex-basis: calc(50% - 30%);
+  border-right: 1px solid rgb(181, 181, 181);
+  padding-right: 20px;
+  margin-right: 20px;
+  background-color: #F2F1F1;
+}
+
+/* Lists inside Text */
+.text ul {
+  list-style: disc; /* Change to 'disc' for regular bullets */
+  margin-left: 20px; /* Add some left margin for indentation */
+  padding-left: 20px; /* Add padding for spacing */
+}
+
+/* Aside */
+.aside {
+  flex: 1; /* Takes 1 part of the available space */
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+/* Text Container */
+.text {
+  max-width: 500px;
+  font-size: 16px;
+  overflow: auto;
+}
+
+/* Splash Container */
+.splashcontainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .splashcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text, .aside {
+    flex-basis: unset;
+    width: 100%;
+  }
+}
+
+/* Banner */
+.banner {
+  background-image: url(./assets/images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 100px 0; /* Adjust as needed */
+  color: #fff; /* Text color on the banner */
+}
+
+  </style>
+</head>
 
 <body>
   <header>
+    <div class="banner">
+      <!-- Your banner content goes here -->
+     <h1></h1>
+     <h2></h2>
+    </div>
     <div class="flex-container">
       <!-- dropdown-menu -->
       <nav id="navDropdown">
         <div class="dropdown">
           <button class="dropbtn"><span class="fa fa-bars fa-2x"></span></button>
           <div class="dropdown-content">
-            <a href="#" class="active-menu-item"><b>{</b> Home <b>}</b></a>
-            <a href="page-2.html">Designers</a>
-            <a href="page-3.html">Trending</a>
+            <a href="index.html">Home</a>
+            <a href="#" class="active-menu-item"><b>{</b> Trending <b>}</b></a>
+            <a href="page-3.html"><b>Designers</a>
             <a href="page-4.html">Best Sellers</a>
             <a href="page-5.html">On the Runway</a>
             <a href="page-6.html">Year in Review</a>
@@ -32,13 +106,13 @@
       <nav id="navRight">
       <ul style="padding-right: 20px;">
       <li>
-      <a href="#" class="active-page"><b>{</b> Home <b>}</b></a>
+      <a href="index.html"><b>|</b> Home <b>|</b></a>
       </li>
       <li>
-      <a href="page-2.html"><b>|</b> Designers <b>|</b></a>
+      <a href="#" class="active-page"><b>{</b> Trending <b>}</b></a>
       </li>
       <li>
-      <a href="page-3.html"><b>|</b> Trending <b>|</b></a>
+        <a href="page-3.html"><b>|</b> Designers <b>|</b></a>
       </li>
       <li>
       <a href="page-4.html"><b>|</b> Best Sellers <b>|</b></a>
@@ -53,61 +127,48 @@
       </nav>
     </div>
   </header>
-  <section style="display: flex; flex-wrap: wrap; padding: 20px;">
-    <article style="flex: 70%; border-right: 1px solid rgb(181, 181, 181);">
-      <!-- TODO: add main content here -->
-      hello index.html
-    </article>
-    <aside style="flex: 30%; padding-left: 20px;">
-      <div>
-        <!-- TODO: add sidebar content here -->
-        <iframe allow="autoplay" width="100%" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
-        hello class
-      </div>
-    </aside>
-  </section>
-  <div class="to-top"><a href="#">Top</a></div>
-<footer class="flex-rw">
-  
-    <ul class="footer-list-top">
-      <li>
-        <h4 class="footer-list-header">Lux Couture</h4></li>
-      <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEWSLETTER</a></li>
-      <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">GET TO KNOW US</a></li>
-      <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">BECOME A RETAILER</a></li>
-      <li><a href='#' itemprop="significantLink" class="generic-anchor footer-list-anchor">CAREERS</a></li>
-      <li><a href='#' class="generic-anchor footer-list-anchor" itemprop="significantLink">EVENTS</a></li>
-    </ul> 
-    <ul class="footer-list-top">
-      <li>
-        <h4 class="footer-list-header">Stay on the Edge</h4></li>
-      <li><a href='#' class="generic-anchor footer-list-anchor">FASHION</a></li>
-      <li><a href='#' class="generic-anchor footer-list-anchor">BEAUTY</a></li>
-      <li><a href='#' class="generic-anchor footer-list-anchor">DECOR</a></li>
-      <li><a href='#' class="generic-anchor footer-list-anchor">CULTURE</a></li>
-      <li><a href='#' class="generic-anchor footer-list-anchor" target="_blank">LIVING</a></li>
-    </ul>
-    <section class="footer-social-section flex-rw">
-        <span class="footer-social-overlap footer-social-connect">
-        CONNECT <span class="footer-social-small">with</span> US
-        </span>
-        <span class="footer-social-overlap footer-social-icons-wrapper">
-        <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
-        <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
-        <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
-        </span>
-    </section>
-    <section class="footer-bottom-section flex-rw">
-  <div class="footer-bottom-wrapper">   
-  <i class="fa fa-copyright" role="copyright">
-   
-  </i> ©2023 Lux Couture in <address class="footer-address" role="company address">Bakersfield, CA.</address><span class="footer-bottom-rights"> All rights reserved. </span>
-      </div>
-      <div class="footer-bottom-wrapper">
-      <a href="#" class="generic-anchor" rel="nofollow">Terms</a> | <a href="#" class="generic-anchor" rel="nofollow">Privacy</a>
+  <!-- Inline CSS -->
+  <section class="flex-container">
+    <div class="articles-container">
+      <article class="article">
+        <div class="splashcontainer">
+          <section>
+            <!-- Your article content goes here -->
+          </section>
+          <div class="text">
+      <h1>Trending</h1>
+      <h2>Spring Fashion Trends</h2>
+As the flowers bloom, Lux Couture introduces the freshest spring trends that breathe new life into your wardrobe. Our collection embodies the spirit of the season with soft pastels, floral prints, and lightweight layers that capture the essence of rebirth. Step into the sunlight wearing flowy skirts and dresses that mirror the grace of the petals. Spring is the time to embrace the romance of lace, and at Lux Couture, we've got you covered with delicate designs that exude timeless elegance. And of course, spring wouldn't be complete without the resurgence of millennial pink, the hue that signifies renewal and optimism. From garden parties to brunch outings, Lux Couture celebrates the beauty of spring with every outfit.
+<ul>
+  <li>Soft pastels and floral prints</li>
+  <li>Flowy skirts and dresses</li>
+  <li>Embrace of millennial pink</li>
+</ul>
+          </div>
         </div>
+      </article>
+<article class="article">
+  <div class="splashcontainer">
+    <section>
+      <!-- Your article content goes here -->
     </section>
-  </footer>
+    <div class="text">
+      <h2>Summer Fashion Trends</h2>
+      <p>Get ready to turn up the heat this summer with Lux Couture's sizzling collection of the season's hottest trends. Dive into a world of vibrant colors, flowing fabrics, and bold patterns that embody the essence of the sun-soaked days. From the runway to your closet, our curated selection brings you the epitome of summer style. Picture yourself in breezy maxi dresses that dance with the wind, or slip into chic swimwear that makes a splash by the pool. And don't miss out on the revival of a classic: millennial pink, the color that effortlessly blends sophistication and playfulness. At Lux Couture, we're all about making summer memories in style.</p>
+      <ul>
+        <li>Vibrant colors and bold patterns</li>
+        <li>Breezy maxi dresses and chic swimwear</li>
+        <li>Revival of millennial pink</li>
+      </ul>
+    </div>
+  </div>
+</article>
+</div>
+</section>
 
-</body>
-</html>
+<aside class="aside">
+  <div class="splashcontainer"></div>
+    <!-- Your aside content goes here -->
+    <iframe allow="autoplay" height="200" src="https://www.iheart.com/live/energy-953-7587/?embed=true" frameborder="0"></iframe>
+  </div>
+</aside>

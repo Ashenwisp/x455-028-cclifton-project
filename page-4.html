@@ -32,22 +32,18 @@
   
         table#your-table-items th:nth-child(1),
         table#your-table-items td:nth-child(1) {
-          width: 35%;
         }
   
         table#your-table-items th:nth-child(2),
         table#your-table-items td:nth-child(2) {
-          width: 30%;
         }
   
         table#your-table-items th:nth-child(3),
         table#your-table-items td:nth-child(3) {
-          width: 20%;
         }
   
         table#your-table-items th:nth-child(4),
         table#your-table-items td:nth-child(4) {
-          width: 15%;
         }
   
         table#your-table-items thead {
@@ -125,7 +121,7 @@
         </div>
       </nav>
       <!-- center logo -->
-      <nav id="navLogo"><a class="logo" href="#"></a></nav>
+      <nav id="navLogo"><a class="logo" href="index.html"></a></nav>
       <!-- horizontal right -->
       <nav id="navRight">
       <ul style="padding-right: 20px;">
@@ -151,17 +147,22 @@
       </nav>
     </div>
   </header>
+  <h1 class="designers-title">Best Sellers</h1></div>
   <!-- Inline CSS -->
   <section style="display: flex; flex-wrap: wrap; padding: 20px;">
     <article style="flex: 60%; border-right: 1px solid rgb(181, 181, 181); padding-right: 20px;">
       <!-- TODO: add main content here -->
       <title>Table Sortable</title>
         <div>
-          <h1>Best Sellers</h1>
-          <p>
             We're thrilled to showcase our all-time favorites. These are the ultimate must-haves, the pieces that will define tomorrow's fashion. Explore Lux Couture's world and experience what life is like for those on the edge.
-          </p>
-          <table id="your-table-items">
+            <p>
+          <table id="your-table-items" style="width:100%; table-layout: fixed;">
+            <colgroup>
+              <col style="width: 25%;"><!-- Ranking column -->
+              <col style="width: 25%;"><!-- Type column -->
+              <col style="width: 25%;"><!-- Fabric column -->
+              <col style="width: 25%;"><!-- Designer column -->
+            </colgroup>
             <thead>
               <tr>
                 <th>Ranking</th>

@@ -16,6 +16,112 @@ body {
   background-color: #F2F1F1;
 }
 
+/* Track */
+::-webkit-scrollbar
+{
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track
+{
+  background: #80C525;
+}
+
+
+/* Thumb */
+::-webkit-scrollbar-thumb
+{
+  background: #404040;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+  background: #505050;
+}
+
+::-webkit-scrollbar-thumb:active
+{
+  background: #404040;
+}
+
+::-webkit-scrollbar-thumb:vertical
+{
+  border-top: solid 2px rgba(33,33,33,0.5);
+  border-bottom: solid 2px rgba(33,33,33,0.5);
+}
+/*
+::-webkit-scrollbar-thumb:horizontal
+{
+  border-right: solid 2px rgba(33,33,33,0.5);
+  border-left: solid 2px rgba(33,33,33,0.5);
+}
+*/
+
+/* Buttons */
+::-webkit-scrollbar-button:single-button
+{
+  border-style: solid;
+  height: 8px;
+  width: 16px;
+}
+
+
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement
+{
+  border-width: 0 7px 14px 7px;
+  border-color: transparent transparent #404040 transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover
+{
+  border-color: transparent transparent #505050 transparent;
+}
+
+
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment
+{
+  border-width: 14px 7px 0 7px;
+  border-color: #404040 transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:hover
+{
+  border-color: #505050 transparent transparent transparent;
+}
+
+
+/* Left
+::-webkit-scrollbar-button:horizontal:decrement
+{
+  border-width: 7px 14px 7px 0;
+  border-color: transparent #404040 transparent transparent;
+}
+
+::-webkit-scrollbar-button:horizontal:decrement:hover
+{
+  border-color: transparent #505050 transparent transparent;
+}
+
+*/
+/* Right 
+::-webkit-scrollbar-button:horizontal:increment
+{
+  border-width: 7px 0 7px 14px;
+  border-color: transparent transparent transparent #404040;
+}
+
+::-webkit-scrollbar-button:horizontal:increment:hover
+{
+  border-color: transparent transparent transparent #505050;
+}
+*/
+
+
+
+
 /* Navigation styles */
 nav ul {
   list-style: none;
@@ -59,7 +165,12 @@ a.logo {
   background-size: contain;
   float: left;
 }
-  
+
+.designers-title {
+  padding-top: 30px;
+  padding-left: 30px; 
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -100,6 +211,8 @@ a.logo {
   background-color: #373737;
   min-width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  position: fixed;
 }
 
 .dropdown-content a {
@@ -146,12 +259,13 @@ a.logo {
 .padding-right {
   padding-right: 15px;
 }
-
+/* TEST
 footer {
   background-color: #000;
   color: #fff;
   padding: 20px 0;
 }
+*/
 /* Additional global styles */
 * {
   box-sizing: border-box;
