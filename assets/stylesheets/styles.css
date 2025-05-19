@@ -381,7 +381,10 @@ footer {
   margin-top: auto;
   width: 100%;
 }
-
+.footer-social-icons-wrapper a,
+.footer-social-icons-wrapper a:visited {
+  color: #80C525 !important;
+}
 .footer-list-top {
   width: 50%;
 }
@@ -588,9 +591,5 @@ footer {
   .footer-bottom-wrapper {
     font-size: 1.3em;
   }
-  .footer-social-icons-wrapper a,
-.footer-social-icons-wrapper a:visited {
-  color: #80C525 !important;
-}
 }
 }
